@@ -1,0 +1,111 @@
+:root {
+	--color-light:#0085cf;
+	--color-dark:#005582;
+
+	--color-discord-ceo: #e74c3c;
+	--color-discord-deputy: #f1c40f;
+
+	--color-social-youtube: #fe3d00;
+	--color-social-twitch: #8e24aa;
+	--color-social-vk: #0288d1;
+	--color-social-discord: #8b9dfe;
+	--color-social-steam: #455a64;
+
+	--font-family: 'Fira Sans', sans-serif;
+}
+
+
+html, body {
+	margin: 0;
+}
+
+a { color: var(--color-dark); }
+
+.transition {
+	transition-timing-function: cubic-bezier(.77,0,.18,1);
+	transition-property: all;
+	transition-duration: 0.25s;
+}
+
+
+.dreamon-color-light { color: var(--color-light); }
+.dreamon-color-dark { color: var(--color-dark); }
+.dreamon-title {
+	color: var(--color-light);
+	font-weight: 400;
+}
+
+.discord-role { font-weight: 400; }
+.ceo { color: var(--color-discord-ceo); }
+.deputy { color: var(--color-discord-deputy); }
+
+
+game {
+	font-style: italic;
+	font-weight: bolder;
+}
+.game-icon { height: 24px; }
+
+a.big-button { margin: 0px 25px; position: relative; text-decoration: none; }
+a.big-button.youtube { background: var(--color-social-youtube); }
+a.big-button.twitch { background: var(--color-social-twitch); }
+a.big-button.vk { background: var(--color-social-vk); }
+a.big-button.discord { background: var(--color-social-discord); }
+a.big-button.steam { background: var(--color-social-steam); }
+
+a.big-button:hover {
+	margin-bottom: 20px !important;
+}
+
+.social-name {
+	display: block;
+	text-align: center;
+	font-size: 20pt;
+	color: white;
+	font-family: var(--font-family);
+	height: 0px;
+	overflow: hidden;
+}
+
+a.big-button:hover .social-name {
+	height: 40px;
+}
+
+.fade {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+
+section.module .container {
+	font-size: 20pt;
+	font-family: var(--font-family);
+	font-weight: 100;
+	
+	padding: 10px 10%;
+	text-align: justify;
+}
+
+section.module.parallax {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+section.module.parallax.image {
+	height: 800px;
+}
+
+section.module.image-1 { background-image: url("images/background/1.jpg"); height: 1000px !important; }
+section.module.image-2 { background-image: url("images/background/2.jpg"); }
+section.module.image-3 { background-image: url("images/background/4.jpg"); }
+
+.center-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
