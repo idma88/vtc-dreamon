@@ -64,7 +64,8 @@ a.big-button.discord { background: var(--color-social-discord); }
 a.big-button.steam { background: var(--color-social-steam); }
 a.big-button.vtcpanel { background: var(--color-social-vtcpanel); }
 
-a.big-button.opg { background: #666; }
+a.big-button.opg { background: #fff; }
+a.big-button.opg .social-name { color: #000 !important; }
 a.big-button.akvilon { background: #c4ff0d; }
 a.big-button.akvilon .social-name { color: #000 !important; }
 a.big-button.dobriy-action { background: #ff5400; }
