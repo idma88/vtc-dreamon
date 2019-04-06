@@ -1,0 +1,36 @@
+ol {
+	list-style: none; 
+	counter-reset: li; 
+}
+ol > li:before {
+	counter-increment: li; 
+	content: counters(li,".") ". "; 
+
+	font-weight: 400;
+}
+
+section > div > ol > li {
+	padding-bottom: 1em;
+}
+
+ol, li {
+	padding-left: 0;
+}
+
+ul {
+	padding-left: 2ex;
+	list-style-type: square;
+}
+
+colorsample {
+	display: inline-block;
+	height: 0.75em;
+	width:  0.75em;
+	
+	position: relative;
+	top: 2px;
+	margin-right: 0.5ex;
+
+	background-color: var(--color-light);
+	border: 2px solid #000;
+}

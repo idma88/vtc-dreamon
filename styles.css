@@ -16,21 +16,47 @@
 	--font-family: 'Fira Sans', sans-serif;
 }
 
-
 html, body {
 	margin: 0;
+	font-family: var(--font-family);
+	font-size: 20pt;
+	font-weight: 100;
 }
 
 a { color: var(--color-dark); }
 
-* {
-	font-family: var(--font-family);
+h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+
+sup {
+	font-style: italic;
+	color: #999;
 }
 
-p, span {
-	font-size: 20pt;
-	font-weight: 100;
+code, cite {
+	font-family: 'Fira Mono', monospace;
+	border-width: 2px 2px 2px 10px;
+	border-style: solid;
+	border-color: var(--color-dark);
 }
+
+code {
+	display: block;
+	padding: 1em;
+}
+
+cite {
+	font-style: normal;
+}
+
+article {
+	border-width: 2px 2px 2px 10px;
+	border-style: solid;
+	border-color: var(--color-dark);
+	margin-bottom: 1em;
+	padding-left: 1ex;
+}
+
+.block { display: block; }
 
 .transition {
 	transition-timing-function: cubic-bezier(.77,0,.18,1);
@@ -77,8 +103,7 @@ a.big-button:hover {
 	margin-bottom: 20px !important;
 }
 
-.big-button-list
-{
+.big-button-list {
 	min-height: 320px;
 }
 
@@ -91,9 +116,7 @@ a.big-button:hover {
 	overflow: hidden;
 }
 
-a.big-button:hover .social-name {
-	height: 40px;
-}
+a.big-button:hover .social-name { height: 40px; }
 
 .fade {
 	position: relative;
@@ -119,13 +142,16 @@ section.module.parallax {
 	background-size: cover;
 }
 
-section.module.parallax.image {
-	height: 800px;
-}
+section.module.parallax.image { height: 800px; }
 
 section.module.image-1 { background-image: url("images/background/1.jpg"); height: 1000px !important; }
 section.module.image-2 { background-image: url("images/background/2.jpg"); }
 section.module.image-3 { background-image: url("images/background/4.jpg"); }
+
+section.module.rules-header {
+	height: 200px;
+	background: #000;
+}
 
 .stack {
 	width: 100%;
@@ -135,9 +161,5 @@ section.module.image-3 { background-image: url("images/background/4.jpg"); }
 	align-items: center;
 }
 
-.stack.horisontal {
-	flex-direction: row;
-}
-.stack.vetical {
-	flex-direction: column;
-}
+.stack.horisontal { flex-direction: row; }
+.stack.vetical { flex-direction: column; }
