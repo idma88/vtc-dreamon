@@ -20,7 +20,7 @@ html, body {
 	margin: 0;
 	font-family: var(--font-family);
 	font-size: 20pt;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 a { color: var(--color-dark); }
@@ -97,8 +97,6 @@ a.big-button.akvilon .social-name { color: #000 !important; }
 a.big-button.dobriy-action { background: #ff5400; }
 a.big-button.sssr { background: #a20403; }
 
-
-
 a.big-button:hover {
 	margin-bottom: 20px !important;
 }
@@ -130,25 +128,29 @@ section header, section footer {
 	font-size: 40pt;
 	font-weight: 400;
 }
-section.module .container {
+section .container {
 	padding: 10px 10%;
 	text-align: justify;
 }
 
-section.module.parallax {
+.parallax {
+	perspective: 1px;
+}
+
+.image {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	
+	height: 800px;
 }
 
-section.module.parallax.image { height: 800px; }
+.image-1 { background-image: url("images/background/1.jpg"); height: 100vh !important; }
+.image-2 { background-image: url("images/background/2.jpg"); }
+.image-3 { background-image: url("images/background/4.jpg"); }
 
-section.module.image-1 { background-image: url("images/background/1.jpg"); height: 1000px !important; }
-section.module.image-2 { background-image: url("images/background/2.jpg"); }
-section.module.image-3 { background-image: url("images/background/4.jpg"); }
-
-section.module.rules-header {
+.rules-header {
 	height: 200px;
 	background: #000;
 }
@@ -163,3 +165,17 @@ section.module.rules-header {
 
 .stack.horisontal { flex-direction: row; }
 .stack.vetical { flex-direction: column; }
+
+
+@keyframes onwave {
+	from { top: 0px; }
+	50%  { top: 25px; }
+	to   { top: 0px; }
+}
+
+.scroll-down-icon {
+	width: 50px;
+	top: 0px;
+	position: relative;
+	animation: onwave 1s infinite ease-in-out;
+}
