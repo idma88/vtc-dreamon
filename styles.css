@@ -10,8 +10,6 @@
 	--color-social-vk: #0288d1;
 	--color-social-discord: #8b9dfe;
 	--color-social-steam: #455a64;
-	--color-social-vtcpanel: #9c0001;
-	
 
 	--font-family: 'Fira Sans', sans-serif;
 }
@@ -88,14 +86,17 @@ a.big-button.twitch { background: var(--color-social-twitch); }
 a.big-button.vk { background: var(--color-social-vk); }
 a.big-button.discord { background: var(--color-social-discord); }
 a.big-button.steam { background: var(--color-social-steam); }
-a.big-button.vtcpanel { background: var(--color-social-vtcpanel); }
 
 a.big-button.opg { background: #fff; }
 a.big-button.opg .social-name { color: #000 !important; }
 a.big-button.akvilon { background: #c4ff0d; }
 a.big-button.akvilon .social-name { color: #000 !important; }
 a.big-button.dobriy-action { background: #ff5400; }
-a.big-button.sssr { background: #a20403; }
+a.big-button.skif_cargo { background: #000; }
+a.big-button.flagman { background: #455272; }
+a.big-button.nordic_crown { background: #4d61a0; }
+a.big-button.alpha_yug { background: #c70229; }
+
 
 a.big-button:hover {
 	margin-bottom: 20px !important;
