@@ -57,7 +57,7 @@ article {
 .block { display: block; }
 
 .transition {
-	transition-timing-function: cubic-bezier(.77,0,.18,1);
+	transition-timing-function: cubic-bezier(.77, 0, .18, 1);
 	transition-property: all;
 	transition-duration: 0.25s;
 }
@@ -89,18 +89,22 @@ a.big-button.steam { background: var(--color-social-steam); }
 
 a.big-button.opg { background: #fff; }
 a.big-button.opg .social-name { color: #000 !important; }
-a.big-button.akvilon { background: #c4ff0d; }
-a.big-button.akvilon .social-name { color: #000 !important; }
-a.big-button.dobriy-action { background: #ff5400; }
+a.big-button.dobriy_action { background: #ff5400; }
 a.big-button.skif_cargo { background: #000; }
 a.big-button.flagman { background: #455272; }
 a.big-button.nordic_crown { background: #4d61a0; }
-a.big-button.alpha_yug { background: #c70229; }
+a.big-button.delta { background: #086f39; }
+a.big-button.express_logistic { background: #f27a0f; }
 
 
 .big-button-list {
 	min-height: 320px;
 	flex-wrap: wrap;
+	height: auto !important;
+}
+
+.block-header {
+	height: auto !important;
 }
 
 .social-name {
@@ -116,13 +120,14 @@ a.big-button.alpha_yug { background: #c70229; }
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0, 0, 0, 0.5);
 }
 
 section header, section footer {
 	color: #fff;
 	font-size: 40pt;
 	font-weight: 400;
+	text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8)
 }
 section .container {
 	padding: 10px 10%;
@@ -155,7 +160,7 @@ section .container {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 }
 
