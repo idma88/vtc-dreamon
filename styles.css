@@ -28,6 +28,15 @@ body {
     margin: auto;
 }
 
+p {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+p:nth-last-child(1) {
+    margin-bottom: 30px;
+}
+
 a { color: var(--color-dark); }
 
 h1, h2, h3, h4, h5, h6 { margin-top: 0; }
@@ -83,7 +92,15 @@ a.big-button {
     margin: /*0px 25px*/ 20px;
     position: relative;
     text-decoration: none;
+
+    transform: perspective(900px) translateZ(0px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.5s ease;
 }
+
+a.big-button:hover {
+    transform: perspective(900px) translateZ(100px) rotateX(10deg) rotateY(20deg);
+}
+
 a.big-button.youtube { background: var(--color-social-youtube); }
 a.big-button.twitch { background: var(--color-social-twitch); }
 a.big-button.vk { background: var(--color-social-vk); }
