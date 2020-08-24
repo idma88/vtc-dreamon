@@ -79,7 +79,7 @@ header {
 .logistician { color: var(--color-discord-logistician); }
 
 
-game {
+.game {
     font-style: italic;
     font-weight: 400;
     display: inline-block;
@@ -108,7 +108,7 @@ a.big-button.discord { background: var(--color-social-discord); }
 a.big-button.steam { background: var(--color-social-steam); }
 
 a.big-button.opg { background: #fff; }
-a.big-button.opg .social-name { color: #000 !important; }
+a.big-button.opg .title { color: #000 !important; }
 a.big-button.dobriy_action { background: #ff5400; }
 a.big-button.skif_cargo { background: #fe0000; }
 a.big-button.fortuna_express { background: #3681c1; }
@@ -140,7 +140,7 @@ a.big-button.express_logistic { background: #f27a0f; }
     height: auto !important;
 }
 
-.social-name {
+.big-button .title {
     font-size: 20pt;
     color: #fff;
     overflow: hidden;
@@ -175,9 +175,9 @@ section .container {
     min-height: 800px;
 }
 
-.image-1 { background-image: url("images/background/1.jpg"); height: 100vh !important; }
-.image-2 { background-image: url("images/background/2.jpg"); }
-.image-3 { background-image: url("images/background/4.jpg"); }
+.image-1 { background-image: url("/static/images/background/1.jpg"); height: 100vh !important; }
+.image-2 { background-image: url("/static/images/background/2.jpg"); }
+.image-3 { background-image: url("/static/images/background/4.jpg"); }
 
 .rules-header {
     height: 200px;
