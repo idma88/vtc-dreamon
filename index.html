@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="snap-y">
+<html >
 
 <head>
 	<meta charset="UTF-8">
@@ -12,13 +12,26 @@
 </head>
 
 <body>
-	<div id="app">
+	<div id="app" class="snap-y">
 		<div>
-			<section class="vp-height snap-point parallax image image-1">
-				<div class="max center-center">
+			<section class="vp-height snap-point parallax image image-1" style="display: flex;flex-direction: column;justify-content: end;align-items: center;">
+				<div style="flex: 5; display: flex; align-items: center;">
 					<img src="/static/images/logo-full.png" height="123px">
 				</div>
-				<div style="position: relative;top: -100px;display: flex;justify-content: center;">
+				<a href="#about" style="flex: 1;">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						viewBox="0 0 48 48" version="1.1" class="scroll-down-icon">
+						<g id="surface1">
+							<path
+								d="M 43 17.101563 L 39.898438 14 L 24 29.898438 L 8.101563 14 L 5 17.101563 L 24 36 Z "
+								style="fill:#005582;stroke: #fff;stroke-width: 1px;stroke-linejoin: round;"></path>
+						</g>
+					</svg>
+				</a>
+				<!-- <div class="max center-center">
+					<img src="/static/images/logo-full.png" height="123px">
+				</div>
+				<div style="position: relative; top: -15vh; display: flex; justify-content: center;">
 					<a href="#about">
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 							viewBox="0 0 48 48" version="1.1" class="scroll-down-icon">
@@ -29,7 +42,7 @@
 							</g>
 						</svg>
 					</a>
-				</div>
+				</div> -->
 			</section>
 
 			<section id="about" class="vp-height snap-point parallax text image">
@@ -57,7 +70,7 @@
 				</div>
 			</section>
 
-			<section id="social" class="vp-height snap-point parallax image image-2 ">
+			<section id="social" class="vp-height snap-point parallax image cards-wrapper">
 				<header>Социальные сети</header>
 				<div class="card-list-wrap">
 					<div class="card-list socials">
@@ -73,16 +86,13 @@
 			</section>
 
 			<section id="join" class="vp-height snap-point parallax text image">
-				<div class="container" style="display: flex;flex-direction: row;width: 100%;">
-					<div style="flex: 3;"></div>
-					<div style="flex: 2;">
-						<p>Хотете вступить к нам?</p>
-						<p>Прочтите <a href="rules.html"><b>правила</b></a>, заполните <a href="#form"><b>анкету</b></a> и пройдите небольшое собеседование.</p>
-						<ul>
-							<li>Не пугайтесь размеру наших правил. Мы всего лишь дотошно подошли к их составлению.</li>
-							<li>Хоть мы и принимаем людей в возрасте от 18 лет, но также можем сделать исключение.</li>
-						</ul>
-					</div>
+				<div class="container">
+					<p>Хотете вступить к нам?</p>
+					<p>Прочтите <a href="rules.html"><b>правила</b></a>, заполните <a href="#form"><b>анкету</b></a> и пройдите небольшое собеседование.</p>
+					<ul>
+						<li>Не пугайтесь размеру наших правил. Мы всего лишь дотошно подошли к их составлению.</li>
+						<li>Хоть мы и принимаем людей в возрасте от 18 лет, но также можем сделать исключение.</li>
+					</ul>
 				</div>
 			</section>
 
@@ -96,7 +106,7 @@
 				</div>
 			</section>
 
-			<section id="partners" class="vp-height snap-point parallax image">
+			<section id="partners" class="vp-height snap-point parallax image cards-wrapper">
 				<header>Наши партнёры</header>
 				<div class="card-list-wrap">
 					<div class="card-list">
@@ -115,8 +125,7 @@
 
 			<section id="questions" class="vp-height snap-point parallax text image">
 				<div class="container">
-					<p>По всем вопросам обращайтесь к <role who="ceo">Генеральный директор</role> или <role who="vice">
-							Заместитель</role>
+					<p>Остались вопросы? Обращайтесь к <role who="ceo">Генеральный директор</role> или <role who="vice">Заместитель</role>
 					</p>
 				</div>
 			</section>
