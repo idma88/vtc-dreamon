@@ -1,95 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html class="snap-y">
 
 <head>
 	<meta charset="UTF-8">
 	<title>ВТК DreamOn</title>
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="/static/styles/styles.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i&amp;subset=cyrillic">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i&amp;subset=cyrillic">
 	<script src="/static/scripts/vue.min.js"></script>
 </head>
 
 <body>
 	<div id="app">
-		<section class="parallax image image-1">
-			<div class="max center-center">
-				<img src="/static/images/logo-full.png" height="123px">
-			</div>
-			<div style="position: relative;top: -100px;display: flex;justify-content: center;">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48"
-					version="1.1" class="scroll-down-icon">
-					<g id="surface1">
-						<path d="M 43 17.101563 L 39.898438 14 L 24 29.898438 L 8.101563 14 L 5 17.101563 L 24 36 Z "
-							style="fill:#005582;stroke: #fff;stroke-width: 1px;stroke-linejoin: round;"></path>
-					</g>
-				</svg>
-			</div>
-		</section>
-
-		<section class="parallax">
-			<div class="container">
-				<p><span class="dreamon-title">ВТК "DreamOn"</span> была основана 19 января 2018 года. Мы &ndash; виртуальная компания, которая предлагает Вам приятное времяпрепровождение на просторах <game id="ets2" title="Euro Truck Simulator 2"></game> и <game id="ats" title="American Truck Simulator"></game>, а так же проведение и участие в конвоях, включая совместные конвои с другими компаниями.</p>
-
-				<p>Мы предлагаем вам:</p>
-				<ul>
-					<li>регулярные конвои;</li>
-					<li>позитивное общение;</li>
-					<li>за хорошее поведение могут выдавать орехи (но об этом никому).</li>
-				</ul>
-
-				<p>Мы рады принять общительных, ответственных, весёлых, а главное <b>адекватных</b> людей.</p>
-
-				<!-- <p>Если вы желаете вступить в нашу компанию, пожалуйста, прочтите <a target="_blank" href="https://discord.gg/VPvgtXJ"><b>правила</b></a> и пройдите собеседование.</p> -->
-				<p>Если вы желаете вступить в нашу компанию, пожалуйста, прочтите <a href="rules.html"><b>правила</b></a> и пройдите небольшое собеседование.<br />
-				Не пугайтесь размеру наших правил. Мы всего лишь дотошно подошли к их составлению.<br />
-				Хоть мы и принимаем людей в возрасте от 18 лет, но также можем сделать исключение.</p>
-			</div>
-		</section>
-
-		<section class="parallax image image-2 ">
-			<header>Социальные сети</header>
-			<div class="big-button-list-wrap">
-				<div class="big-button-list socials">
-					<big-button group="socials" id="youtube" link="https://www.youtube.com/channel/UCuxaTBMNUVvp20mN3ypmUyg" title="YouTube"></big-button>
-					<big-button group="socials" id="twitch" link="https://www.twitch.tv/idma88" title="Twitch"></big-button>
-					<big-button group="socials" id="vk" link="https://vk.com/dreamon_follow_the_dreams" title="ВКонтакте"></big-button>
-					<big-button group="socials" id="discord" link="https://discord.gg/VEuzE62" title="Discord"></big-button>
-					<big-button group="socials" id="steam" link="https://steamcommunity.com/id/idma88/myworkshopfiles/" title="Steam Workshop"></big-button>
+		<div>
+			<section class="vp-height snap-point parallax image image-1">
+				<div class="max center-center">
+					<img src="/static/images/logo-full.png" height="123px">
 				</div>
-			</div>
-		</section>
-
-		<section class="parallax">
-			<div class="container">
-				<p>Вы руководитель/логист/модератор ВТК? Хотите принять участие в открытых конвоях или пригласить нас на своё мероприятие?</p>
-				<p><a target="_blank" href="https://discord.gg/VEuzE62">Напишите</a> нам об этом. Мы всегда рады новым друзьям и партнёрам.</p>
-			</div>
-		</section>
-
-		<section class="parallax image image-3 partners">
-			<header>Наши партнёры</header>
-			<div class="big-button-list-wrap">
-				<div class="big-button-list">
-					<big-button group="partners" id="dobriy_action" title="Добрый Action"></big-button>
-					<big-button group="partners" id="skif_cargo" title="SKIF CARGO"></big-button>
-					<big-button group="partners" id="fortuna_express" title="Фортуна Экспресс"></big-button>
-					<big-button group="partners" id="delta" title="Дельта"></big-button>
-					<big-button group="partners" id="express_logistic" title="Express Logistic"></big-button>
-					<big-button group="partners" id="flagman" title="Flagman"></big-button>
-					<big-button group="partners" id="sibir" title="Сибирь"></big-button>
-					<big-button group="partners" id="add" title="АрмагеДДон"></big-button>
-					<big-button group="partners" id="nordic_crown" title="Nordic Crown"></big-button>
+				<div style="position: relative;top: -100px;display: flex;justify-content: center;">
+					<a href="#about">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+							viewBox="0 0 48 48" version="1.1" class="scroll-down-icon">
+							<g id="surface1">
+								<path
+									d="M 43 17.101563 L 39.898438 14 L 24 29.898438 L 8.101563 14 L 5 17.101563 L 24 36 Z "
+									style="fill:#005582;stroke: #fff;stroke-width: 1px;stroke-linejoin: round;"></path>
+							</g>
+						</svg>
+					</a>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section class="parallax">
-			<div class="container">
-				<p>По всем вопросам обращайтесь к <a target="_blank" href="https://discord.gg/VEuzE62" class="discord-role ceo">@Генеральный директор</a> или <a target="_blank" href="https://discord.gg/VEuzE62" class="discord-role vice">@Заместитель</a></p>
-				<p>По вопросам совместных конвоев вы также можете обратиться к <a target="_blank" href="https://discord.gg/VEuzE62" class="discord-role logistician">@Логист</a></p>
-			</div>
-		</section>
+			<section id="about" class="vp-height snap-point parallax text image">
+				<div class="container">
+					<p><span class="dreamon-title">ВТК "DreamOn"</span> была основана 19 января 2018 года. Мы &ndash;
+						виртуальная компания, которая предлагает Вам приятное времяпрепровождение на просторах <game
+							id="ets2" title="Euro Truck Simulator 2"></game> и <game id="ats"
+							title="American Truck Simulator"></game>, а так же проведение и участие в конвоях, включая
+						совместные конвои с другими компаниями.</p>
+
+					<p>Мы предлагаем вам:</p>
+					<ul>
+						<li>регулярные конвои;</li>
+						<li>позитивное общение;</li>
+						<li>за хорошее поведение могут выдавать орехи (но об этом никому).</li>
+					</ul>
+
+					<p>Мы рады принять общительных, ответственных, весёлых, а главное <b>адекватных</b> людей.</p>
+
+					<!-- <p>Если вы желаете вступить в нашу компанию, пожалуйста, прочтите <a target="_blank" href="https://discord.gg/VPvgtXJ"><b>правила</b></a> и пройдите собеседование.</p> -->
+					<!-- <p>Если вы желаете вступить в нашу компанию, пожалуйста, прочтите <a
+							href="rules.html"><b>правила</b></a> и пройдите небольшое собеседование.<br />
+						Не пугайтесь размеру наших правил. Мы всего лишь дотошно подошли к их составлению.<br />
+						Хоть мы и принимаем людей в возрасте от 18 лет, но также можем сделать исключение.</p> -->
+				</div>
+			</section>
+
+			<section id="social" class="vp-height snap-point parallax image image-2 ">
+				<header>Социальные сети</header>
+				<div class="card-list-wrap">
+					<div class="card-list socials">
+						<card group="socials" id="youtube"
+							link="https://www.youtube.com/channel/UCuxaTBMNUVvp20mN3ypmUyg">YouTube</card>
+						<card group="socials" id="twitch" link="https://www.twitch.tv/idma88">Twitch</card>
+						<card group="socials" id="vk" link="https://vk.com/dreamon_follow_the_dreams">ВКонтакте</card>
+						<card group="socials" id="discord" link="https://discord.gg/VEuzE62">Discord</card>
+						<card group="socials" id="steam" link="https://steamcommunity.com/id/idma88/myworkshopfiles/">
+							Steam Workshop</card>
+					</div>
+				</div>
+			</section>
+
+			<section id="join" class="vp-height snap-point parallax text image">
+				<div class="container" style="display: flex;flex-direction: row;">
+					<div style="flex: 3;"></div>
+					<div style="flex: 2;">
+						<p>Хотете вступить к нам?</p>
+						<p>Прочтите <a href="rules.html"><b>правила</b></a>, заполните <a href="#form"><b>анкету</b></a> и пройдите небольшое собеседование.</p>
+						<p style="font-size: small;"><em>Не пугайтесь размеру наших правил. Мы всего лишь дотошно подошли к их составлению. Хоть мы и принимаем людей в возрасте от 18 лет, но также можем сделать исключение.</em></p>
+					</div>
+				</div>
+			</section>
+
+			<section id="invite" class="vp-height snap-point parallax text image">
+				<div class="container">
+					<p>Вы руководитель/логист/модератор ВТК? Хотите принять участие в открытых конвоях или пригласить
+						нас на своё мероприятие?</p>
+					<!-- <p><a target="_blank" href="https://discord.gg/VEuzE62">Напишите</a> нам об этом. Мы всегда рады новым друзьям и партнёрам.</p> -->
+					<p>Сообщите <role who="ceo">Генеральный директор</role>, <role who="vice">Заместитель</role> или
+						<role who="logistician">Логист</role> об этом. Мы всегда рады новым друзьям и партнёрам.</p>
+				</div>
+			</section>
+
+			<section id="partners" class="vp-height snap-point parallax image">
+				<header>Наши партнёры</header>
+				<div class="card-list-wrap">
+					<div class="card-list">
+						<card group="partners" id="dobriy_action">Добрый Action</card>
+						<card group="partners" id="skif_cargo">SKIF CARGO</card>
+						<card group="partners" id="fortuna_express">Фортуна Экспресс</card>
+						<card group="partners" id="delta">Дельта</card>
+						<card group="partners" id="express_logistic">Express Logistic</card>
+						<card group="partners" id="flagman">Flagman</card>
+						<card group="partners" id="sibir">Сибирь</card>
+						<card group="partners" id="add">АрмагеДДон</card>
+						<card group="partners" id="nordic_crown">Nordic Crown</card>
+					</div>
+				</div>
+			</section>
+
+			<section id="questions" class="vp-height snap-point parallax text image">
+				<div class="container">
+					<p>По всем вопросам обращайтесь к <role who="ceo">Генеральный директор</role> или <role who="vice">
+							Заместитель</role>
+					</p>
+				</div>
+			</section>
+		</div>
 	</div>
 </body>
 

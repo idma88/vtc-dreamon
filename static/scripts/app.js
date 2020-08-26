@@ -4,18 +4,23 @@ Vue.component('game', {
         '<span class="game"><img :src="`/static/images/games/${id}.png`" class="game-icon"> {{ title }}</span>'
 })
 
-Vue.component('big-button', {
-    props: [ 'id', 'group', 'link', 'title' ],
+Vue.component('card', {
+    props: [ 'id', 'group', 'link' ],
     template:
-        '<a target="_blank" :href="link" :class="`big-button ${id}`"> \
+        '<a target="_blank" :href="link" :class="`card ${id}`"> \
             <img :src="`/static/images/${group}/${id}.png`" height="256px" width="256px" class="fade transition"> \
-            <span class="title transition">{{ title }}</span> \
+            <span class="title transition"><slot></slot></span> \
         </a>'
+})
+
+Vue.component('role', {
+    props: [ 'who' ],
+    template: '<a target="_blank" href="https://discord.gg/VEuzE62" :class="`discord-role ${who}`">@<slot></slot></a>'
 })
 
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Привет, Vue!'
+        discord: 'https://discord.gg/VEuzE62'
     }
 })

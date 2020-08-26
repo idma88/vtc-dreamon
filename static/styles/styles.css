@@ -20,12 +20,19 @@ html, body {
     font-family: var(--font-family);
     font-size: 20pt;
     font-weight: 300;
-    line-height: 1.5em
+    line-height: 1.5em;
+
+    height: 100%;
 }
 
 body {
     max-width: 1920px;
     margin: auto;
+}
+
+#app {
+    height: 100vh;
+    /* overflow: auto; */
 }
 
 p {
@@ -54,7 +61,21 @@ header {
     width: 100%;
     height: 100%;
 }
-.center-center {
+
+.vp-height {
+    height: 100vh;
+}
+
+.snap-y {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.snap-point {
+    scroll-snap-align: center;
+}
+
+.center-center, .text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,6 +85,20 @@ header {
     transition-timing-function: cubic-bezier(.77, 0, .18, 1);
     transition-property: all;
     transition-duration: 0.25s;
+}
+
+nav {
+    position: fixed;
+    z-index: 100;
+    background: #fff;
+    padding: 10px 10px;
+    right: 30px;
+    top: 10px;
+}
+
+nav > a {
+    text-decoration: none;
+    margin: auto 15px;
 }
 
 .dreamon-color-light { color: var(--color-light); }
@@ -86,7 +121,7 @@ header {
 }
 .game-icon { height: 24px; }
 
-a.big-button {
+a.card {
     display: flex;
     flex-direction: column;
     margin: /*0px 25px*/ 20px;
@@ -97,29 +132,29 @@ a.big-button {
     transition: transform 0.5s ease;
 }
 
-a.big-button:hover {
+a.card:hover {
     transform: perspective(900px) translateZ(100px) rotateX(10deg) rotateY(20deg);
 }
 
-a.big-button.youtube { background: var(--color-social-youtube); }
-a.big-button.twitch { background: var(--color-social-twitch); }
-a.big-button.vk { background: var(--color-social-vk); }
-a.big-button.discord { background: var(--color-social-discord); }
-a.big-button.steam { background: var(--color-social-steam); }
+a.card.youtube { background: var(--color-social-youtube); }
+a.card.twitch { background: var(--color-social-twitch); }
+a.card.vk { background: var(--color-social-vk); }
+a.card.discord { background: var(--color-social-discord); }
+a.card.steam { background: var(--color-social-steam); }
 
-a.big-button.opg { background: #fff; }
-a.big-button.opg .title { color: #000 !important; }
-a.big-button.dobriy_action { background: #ff5400; }
-a.big-button.skif_cargo { background: #fe0000; }
-a.big-button.fortuna_express { background: #3681c1; }
-a.big-button.flagman { background: #455272; }
-a.big-button.sibir { background: #901d7a; }
-a.big-button.add { background: #262626; }
-a.big-button.nordic_crown { background: #4d61a0; }
-a.big-button.delta { background: #086f39; }
-a.big-button.express_logistic { background: #f27a0f; }
+a.card.opg { background: #fff; }
+a.card.opg .title { color: #000 !important; }
+a.card.dobriy_action { background: #ff5400; }
+a.card.skif_cargo { background: #fe0000; }
+a.card.fortuna_express { background: #3681c1; }
+a.card.flagman { background: #455272; }
+a.card.sibir { background: #901d7a; }
+a.card.add { background: #262626; }
+a.card.nordic_crown { background: #4d61a0; }
+a.card.delta { background: #086f39; }
+a.card.express_logistic { background: #f27a0f; }
 
-.big-button-list-wrap {
+.card-list-wrap {
     min-height: 680px;
     display: flex;
     flex-direction: column;
@@ -127,7 +162,7 @@ a.big-button.express_logistic { background: #f27a0f; }
     align-items: center;
 }
 
-.big-button-list {
+.card-list {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -140,7 +175,7 @@ a.big-button.express_logistic { background: #f27a0f; }
     height: auto !important;
 }
 
-.big-button .title {
+.card .title {
     font-size: 20pt;
     color: #fff;
     overflow: hidden;
@@ -161,6 +196,9 @@ section .container {
     padding: 10px 10%;
     text-align: justify;
 }
+section.text .container {
+    background: rgba(255,255,255,0.85);
+}
 
 .parallax {
     perspective: 1px;
@@ -175,9 +213,13 @@ section .container {
     min-height: 800px;
 }
 
-.image-1 { background-image: url("/static/images/background/1.jpg"); height: 100vh !important; }
-.image-2 { background-image: url("/static/images/background/2.jpg"); }
-.image-3 { background-image: url("/static/images/background/4.jpg"); }
+.image-1 { background-image: url("/static/images/background/1.jpg"); }
+.image#about  { background-image: url("/static/images/background/about.jpg"); }
+.image#social { background-image: url("/static/images/background/social1.jpg"); }
+.image#join { background-image: url("/static/images/background/join.jpg"); }
+.image#invite { background-image: url("/static/images/background/invite.jpg"); }
+.image#partners { background-image: url("/static/images/background/partners.jpg"); }
+.image#questions { background-image: url("/static/images/background/questions.jpg"); }
 
 .rules-header {
     height: 200px;
@@ -197,11 +239,18 @@ section .container {
     animation: onwave 1s infinite ease-in-out;
 }
 
+@media (max-width: 880px) {
+    #socials, #partners { height: auto; }
+}
+
+@media (max-width: 1350px) {
+    #about { height: auto; }
+}
 
 @media (min-width: 1180px) {
-    .socials { width: 1180px; }
+    .socials, .partners { width: 1180px; }
 }
 
 @media (min-width: 1480px) {
-    .socials { width: 100%; }
+    .socials, .partners { width: 100%; }
 }
