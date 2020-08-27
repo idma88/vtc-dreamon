@@ -67,7 +67,8 @@ header {
 }
 
 .snap-y {
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
+    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
 }
 
@@ -230,11 +231,6 @@ section.text .container {
 .image#invite { background-image: url("/static/images/background/invite.jpg"); }
 .image#partners { background-image: url("/static/images/background/partners.jpg"); }
 .image#questions { background-image: url("/static/images/background/questions.jpg"); background-position-x: 75%; }
-
-.rules-header {
-    height: 200px;
-    background: #000;
-}
 
 @keyframes onwave {
     from { top: 0px; }

@@ -1,3 +1,10 @@
+.rules-header {
+    /* height: 200px; */
+    height: 15vh;
+    width: 100%;
+    background: #000;
+}
+
 ol {
     list-style: none; 
     counter-reset: li; 
@@ -68,4 +75,17 @@ colorsample {
 
     background-color: var(--color-light);
     border: 2px solid #000;
+}
+
+sup {
+    font-size: 80%;
+}
+
+#rules-header {
+    background-image: url("/static/images/background/rules-header.jpg");
+
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
 }
